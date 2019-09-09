@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/pri_color_two"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/view"
+        android:background="@drawable/imgbackground">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@mipmap/slider_image"
+
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/logo_relative_layout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/circle"
+
+
+        >
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle1"
+            android:src="@drawable/ha_logo" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_relative_layout">
+
+        <LinearLayout
+            android:id="@+id/MainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:id="@+id/OptionsMainLinearLAyout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_symptoms"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:background="@drawable/button_linearlayout"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/home"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:fontFamily="@font/reg"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Manage Properties"
+                            android:textColor="#4a4a4a"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_disease"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/button_linearlayout"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/leads"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:fontFamily="@font/reg"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Manage Leads"
+                            android:textColor="#4a4a4a"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="0dp"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_test"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:background="@drawable/button_linearlayout"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/revenue"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:fontFamily="@font/reg"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Manage Revenue"
+                            android:textColor="#4a4a4a"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_medicine"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/button_linearlayout"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/list"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:fontFamily="@font/reg"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Todo List"
+                            android:textColor="#4a4a4a"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_device_issued"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:background="@drawable/button_linearlayout"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/expense"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:fontFamily="@font/reg"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Manage Expense"
+                            android:textColor="#4a4a4a"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_prescription"
+                        android:layout_width="160dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/button_linearlayout"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/profilesetting"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:fontFamily="@font/reg"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Profile Setting"
+                            android:textColor="#4a4a4a"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/layout_files"
+                    android:layout_width="95dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/button_linearlayout"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/symptoms"
+
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="File Name"
+                        android:textColor="#868686"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

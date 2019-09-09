@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ha.ecz.com.subscriberpanel.ManagePropertyMasterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbf"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <!--Property Information-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:fontFamily="@font/semibold"
+                android:text="@string/property_information"
+                android:textAllCaps="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/labels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:labelFor="@id/txtPropertyTitle"
+                        android:text="@string/property1_title"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/property_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:src="@drawable/question" />
+                </RelativeLayout>
+
+                <!--Property Title-->
+                <EditText
+                    android:id="@+id/txtPropertyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/prop_et"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:hint="@string/property_title"
+                    android:maxLength="70"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/hintColor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--Property and purpose type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:labelFor="@id/cmbPropertyType"
+                    android:text="@string/property_type"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/cmbPropertyType"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:lineHeight="0dp"
+                    android:textColor="@color/hintColor"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!--city-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/labels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:labelFor="@id/cmbCity"
+                    android:text="@string/city"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/cmbCity"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:lineHeight="0dp"
+                    android:textColor="@color/hintColor"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!--property location-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/labels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/semibold"
+                    android:labelFor="@id/place_autocomplete_fragment"
+                    android:text="@string/add_property" />
+
+
+                <fragment
+                    android:id="@+id/place_autocomplete_fragment"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/prop_et"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/hintColor"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/placeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/DMSans-Bold"
+                android:textSize="14sp" />
+
+            <!--Address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/labels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:labelFor="@id/txtPropAddress"
+                    android:text="@string/address" />
+
+                <EditText
+                    android:id="@+id/txtPropAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/prop_et"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:hint="@string/enter_address"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/hintColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <!--purpose-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/labels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:text="@string/purpose"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/cmbPurpose"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:lineHeight="0sp"
+                    android:textColor="@color/hintColor"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!--currency-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        style="@style/labels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:labelFor="@id/cmbCurrency"
+                        android:text="@string/currency"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+
+                        style="@style/labels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:labelFor="@id/txtPrice"
+                        android:text="@string/price" />
+                </LinearLayout>
+
+                <!--Currency combo-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/cmbCurrency"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="170dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/barlowcondensedregular"
+                        android:textColor="@color/spin_color" />
+
+                    <EditText
+                        android:id="@+id/txtPrice"
+                        android:layout_width="178dp"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/prop_et"
+                        android:fontFamily="@fonts/DMSans-Bold"
+                        android:hint="@string/enter_price"
+                        android:inputType="numberSigned"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/hintColor"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--LandArea-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/labels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:labelFor="@id/txtLandArea"
+                        android:text="@string/land_area_42"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        style="@style/labels"
+                        android:layout_marginStart="-20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:labelFor="@id/cmbAreaUnit"
+                        android:text="@string/unit"
+                        android:layout_marginLeft="-20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txtLandArea"
+                        android:layout_width="170dp"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/prop_et"
+                        android:fontFamily="@fonts/DMSans-Bold"
+                        android:hint="@string/land_area"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/hintColor"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/cmbAreaUnit"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="178dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/barlowcondensedregular"
+                        android:textColor="@color/spin_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Privacy-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/labels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:labelFor="@id/cmbPrivacy"
+                        android:text="@string/privacy" />
+
+                    <TextView
+                        style="@style/labels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:labelFor="@id/cmbActive"
+                        android:text="@string/active" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/cmbPrivacy"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="170dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/barlowcondensedregular"
+                        android:textColor="@color/spin_color" />
+
+                    <Spinner
+                        android:id="@+id/cmbActive"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="175dp"
+                        android:layout_height="34.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/barlowcondensedregular"
+                        android:textColor="@color/spin_color" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/tv_single_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/semibold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/front_image"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/frontimg"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:textColor="@color/hintColor" />
+            </LinearLayout>
+
+            <!--Description-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/labels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:labelFor="@id/txtDescription"
+                    android:text="@string/description" />
+
+                <EditText
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/prop_et"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:gravity="top|start"
+                    android:hint="@string/enter_description"
+                    android:singleLine="false"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:lines="16"
+                    android:maxLines="8"
+                    android:minLines="2"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/hintColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--switches-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <Switch
+                    android:id="@+id/isHot"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:text="@string/mark_as_hot" />
+
+                <Switch
+
+                    android:id="@+id/isFeature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:text="@string/mark_as_feature" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:weightSum="4">
+
+                <Switch
+
+                    android:id="@+id/isPop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:text="@string/mark_as_pop" />
+
+                <Switch
+
+                    android:id="@+id/isPromo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@fonts/DMSans-Bold"
+                    android:text="@string/mark_as_promo" />
+
+            </LinearLayout>
+            <!--Checkbox List-->
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/property_btn"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@fonts/DMSans-Bold"
+                android:text="@string/save"
+                android:textColor="#fff" />
+
+
+            <include
+                android:id="@+id/amenities"
+                layout="@layout/amaliyity_details"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,53 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CheckBox" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/sec_color_one</item>
+        <item name="colorControlActivated">@color/pri_color_two</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:background">@drawable/spinner_layout</item>
+        <item name="android:textColor">@color/pri_color_one</item>
+        <item name="android:textColorHint">@color/pri_color_one</item>
+        <item name="android:fontFamily">@fonts/DMSans-Bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_height">35dp</item>
+    </style>
+
+    <style name="labels">
+
+        <item name="android:fontFamily">@fonts/DMSans-Bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <item name="windowActionBarOverlay">false</item>
+        <item name="android:fontFamily">@font/barlowcondensedregular</item>
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

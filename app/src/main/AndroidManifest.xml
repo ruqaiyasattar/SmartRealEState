@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ha.ecz.com.agentportal">
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|mcc|mnc"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Hundred Alpha"
+        android:networkSecurityConfig="@xml/network_configs"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup,icon,theme,label"
+        tools:targetApi="m">
+        <activity
+            android:name="ha.ecz.com.subscriberpanel.retrofittesting"
+            android:label="@string/title_activity_retrofittesting"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name="ha.ecz.com.subscriberpanel.ViewPropertyActivity"
+            android:parentActivityName="ha.ecz.com.subscriberpanel.PropertiesActivity"></activity>
+        <activity
+            android:name="ha.ecz.com.subscriberpanel.ManagePropertyMasterActivity"
+            android:label="Add Property"
+            android:parentActivityName="ha.ecz.com.subscriberpanel.PropertiesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="ha.ecz.com.subscriberpanel.SplashScreenActivity"
+            android:label="Hundred Alpha"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ha.ecz.com.subscriberpanel.LoginActivity"
+            android:label="Hundred Alpha - Smart Real Estate Agency Mobile App"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="ha.ecz.com.subscriberpanel.DashboardActivity"
+            android:label="@string/txt_welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="ha.ecz.com.subscriberpanel.PropertiesActivity"
+            android:label="My Property Listings"
+            android:parentActivityName="ha.ecz.com.subscriberpanel.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCrbZBRDyiJf-NXW_3luk4HMQbJz1ceMTg" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.asksira.imagepickersheetdemo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

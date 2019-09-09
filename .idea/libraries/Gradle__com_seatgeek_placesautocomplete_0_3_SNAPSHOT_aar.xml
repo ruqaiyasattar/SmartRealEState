@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.seatgeek:placesautocomplete:0.3-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b691878d482208f8cbb6014495db0e3a/jetified-placesautocomplete-0.3-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b691878d482208f8cbb6014495db0e3a/jetified-placesautocomplete-0.3-SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

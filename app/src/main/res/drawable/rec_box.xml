@@ -1,0 +1,27 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape
+            android:shape="rectangle">
+            <gradient
+                android:startColor="@color/sec_color_one"
+                android:centerColor="@color/pri_color_one"
+                android:endColor="@color/pri_color_two"
+                android:angle="90"/>
+        </shape>
+    </item>
+
+    <item android:bottom="1.5dp">
+        <shape
+            android:shape="rectangle" >
+            <solid android:color="#fafafa" />
+
+            <!-- this one is ths color of the  Rounded Button -->
+            <corners
+                android:bottomRightRadius="0dp"
+                android:bottomLeftRadius="0dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp" />
+        </shape>
+    </item>
+
+</layer-list>
