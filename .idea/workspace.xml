@@ -11,9 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff7078b5-09a8-4e10-9cc3-cb79cea66d9f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_home_Downloads_PanelHA_library_src_libs_library_1_0_6_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_home_Downloads_PanelHA_library_src_libs_nineoldandroids_2_4_0_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_home_Downloads_PanelHA_library_src_libs_picasso_2_5_2_jar_unspecified_jar.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/library.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/numberslider/numberslider.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_home_Downloads_SubscriberPanel_master_PanelHA_library_src_libs_library_1_0_6_jar_unspecified_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_home_Downloads_SubscriberPanel_master_PanelHA_library_src_libs_nineoldandroids_2_4_0_jar_unspecified_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_home_Downloads_SubscriberPanel_master_PanelHA_library_src_libs_picasso_2_5_2_jar_unspecified_jar.xml" beforeDir="false" />
@@ -294,6 +294,7 @@
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
